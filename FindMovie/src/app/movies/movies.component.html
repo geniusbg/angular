@@ -1,0 +1,13 @@
+<div class="panel-heading">
+  <h3 class="panel-title">Popular Movies</h3>
+</div>
+
+<div *ngIf="popular">
+  <div *ngFor="let movie of popular.results">
+    <ul>
+      <li>{{movie.id}}</li>
+      <li>{{movie.title}}</li>
+      <button>Details</button>
+    </ul>
+  </div>
+</div>
