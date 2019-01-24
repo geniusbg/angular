@@ -1,0 +1,14 @@
+<h1 *ngIf="title"> The title from child is: {{title}} </h1>
+<ul>
+
+  <app-article 
+  (sendevent)="sendevent($event)"
+  *ngFor="let article of articles"
+
+   [article]="article"
+
+   [articleDesc]="article.description">
+
+  </app-article>
+
+</ul>

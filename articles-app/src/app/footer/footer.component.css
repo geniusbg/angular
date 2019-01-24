@@ -1,0 +1,20 @@
+button{
+    color:black;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 3em;
+    -moz-transform: scale(0.8) rotate(27deg) translate(1px, -20px) skew(6deg, -23deg);
+-webkit-transform: scale(0.8) rotate(27deg) translate(1px, -20px) skew(6deg, -23deg);
+-o-transform: scale(0.8) rotate(27deg) translate(1px, -20px) skew(6deg, -23deg);
+-ms-transform: scale(0.8) rotate(27deg) translate(1px, -20px) skew(6deg, -23deg);
+transform: scale(0.8) rotate(27deg) translate(1px, -20px) skew(6deg, -23deg);
+}
+p{
+    text-shadow: 5px 3px 6px rgba(255,255,255,0.72);
+    font-size: 3em;
+    padding: 20 px;
+    box-shadow: 20px rgb(138, 135, 135);
+    text-transform: capitalize;
+    text-align: center;
+}
