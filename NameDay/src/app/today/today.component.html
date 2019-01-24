@@ -1,0 +1,23 @@
+<div id='centralDiv'><select (change)="selectChangeHandler($event)">
+    <option value="autstria">AT</option>
+    <option value="czech republic">CZ</option>
+    <option value="germany">DE</option>
+    <option value="spain">ES</option>
+    <option value="france">FR</option>
+    <option value="croatia">HR</option>
+    <option value="hungary">HU</option>
+    <option value="italy">IT</option>
+    <option value="poland">PL</option>
+    <option value="sweden">SE</option>
+    <option value="slovakia">SK</option>
+    <option value="united states">US</option>
+  </select>
+
+  <div>{{date | date}}</div>
+  <ul>
+    <li *ngFor="let name of namesSplit">{{name}}</li>
+  </ul>
+  <ul *ngFor="let item of names | keyvalue">
+    <li> <b>{{item.key | titlecase}} </b> : <b>{{item.value}}</b></li>
+  </ul>
+</div>

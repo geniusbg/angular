@@ -1,0 +1,6 @@
+<div *ngIf='names'>
+ 
+  <ul *ngFor="let item of names | keyvalue">
+      <li> <b>{{item.key | titlecase}} </b> : <b>{{item.value}}</b></li>
+    </ul>
+</div>

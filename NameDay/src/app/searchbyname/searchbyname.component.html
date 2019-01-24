@@ -1,0 +1,53 @@
+<form #form='ngForm' (ngSubmit)='getDaybyName(form.value)' class="form-horizontal">
+  <div class="row">
+    <div class="col">
+      <input type="text" minlength="3" id="search" maxlength="20" class="form-control" name='name' #name='ngModel'
+        placeholder="Search name" required ngModel>
+    </div>
+    <div class="col">
+      <select class="form-control" #country='ngModel' placeholder="country" name='country' ng-init='value="at"' ngModel
+        required>
+        <option value>Choose country</option>
+        <option value="at">Austria</option>
+        <option value="cz">Check Republic</option>
+        <option value="de">Germay</option>
+        <option value="es">Spain</option>
+        <option value="fr">France</option>
+        <option value="hr">Croatia</option>
+        <option value="hu">Hungary</option>
+        <option value="it">Italy</option>
+        <option value="pl">Poland</option>
+        <option value="se">Sweden</option>
+        <option value="sk">Slovakia</option>
+        <option value="us">United States</option>
+      </select>
+      <div *ngIf="form.error" class="error">
+      </div>
+    </div>
+  </div>
+  <div *ngIf="name.touched && name.errors" class="container">
+    <div *ngIf="name.errors.minlength" class="alert - alert-danger">
+      The name should be minimut 2 characters!
+    </div>
+    <div *ngIf="name.errors.required" class="alert - alert-danger">
+      Name is required
+    </div>
+  </div>
+  <div *ngIf="country.errors && country.touched" class="alert - alert-danger">
+    Country is required
+  </div>
+  <button type="submit" [disabled]='!form.valid' class="btn btn-primary">Submit</button>
+</form>
+<div *ngIf="names">
+  <ul *ngFor="let name of names">
+    <li>
+      {{name.date | date:'dd MMMM yyyy'}} :
+      {{name.name}}
+    </li>
+  </ul>
+  <div *ngIf="!names.length>0" class='alert alert-info'>
+    No results for your search!<br>
+    Try another more popular name!
+  </div>
+
+</div>
