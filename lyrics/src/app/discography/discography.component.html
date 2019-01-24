@@ -1,0 +1,30 @@
+<form #form='ngForm' (ngSubmit)="getArtistAlbums(form.value)">
+  <div class="form-group">
+    <label for="artist">Artist:</label>
+    <input type="text" class="form-control" id="artist" placeholder="" name='artist' ngModel required>
+  </div>
+  <div class="form-group">
+  </div>
+  <button type="submit" [disabled]="!form.valid">Search</button>
+</form>
+<div *ngIf='artist' class='jumbotron'>
+  <h1>{{artist.strArtist}}</h1>
+  <h3 *ngIf="artist.intBornYear">Born: {{artist.intBornYear}}</h3>
+  <h3 *ngIf="artist.intDiedYear">Died: {{artist.intDiedYear}}</h3>
+  <h3 *ngIf="artist.strCountry">From: {{artist.strCountry}}</h3>
+  <h3 *ngIf="artist.strLabel">Label: {{artist.strLabel}}</h3>
+  <h3 *ngIf="artist.strWebsite">Website: {{artist.strWebsite}}</h3>
+  <h3 *ngIf="artist.strFacebook">Facebook: {{artist.strFacebook}}</h3>
+  <h3 *ngIf="artist.strTwitter">Twitter: {{artist.strTwitter}}</h3>
+  <p>{{artist.strBiographyEN}}</p>
+  {{artist}}
+
+</div>
+<div id="albums "*ngIf="albums">
+  <ul>
+    <li *ngFor="let album of albums">
+      <img src="{{album.strAlbumThumb}}">
+      <h4>{{album.strAlbum}}</h4>
+    </li>
+  </ul>
+</div>
