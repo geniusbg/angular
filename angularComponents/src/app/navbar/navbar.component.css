@@ -1,0 +1,14 @@
+li {
+    color: black;
+    margin: 0px;
+    background-color: red;
+    text-align: left;
+    list-style-type: none;
+  
+  }
+div {
+    margin: 0;
+    padding: 10;
+    background-color: #7f84d3;   
+    overflow: auto;
+  }

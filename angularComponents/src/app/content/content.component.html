@@ -1,0 +1,13 @@
+
+<div>
+    <ul>
+
+      <div *ngFor="let article of articlesFromService; let i = index" >
+      <div>{{article.title}}</div>
+      <textarea>{{article.content}}</textarea>
+        {{messageFromSevice}}
+        
+      </div>
+      
+    </ul>
+  </div>

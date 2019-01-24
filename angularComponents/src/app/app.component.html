@@ -1,0 +1,12 @@
+<div id="content">
+  <div id="left" >
+    <app-navbar [articles]=articles></app-navbar>  
+  </div>
+  <div id="right">
+    <div [ngStyle]="{'font-size': size + 'px'}">
+      <app-content (titlePicked)="doSomething($event)" [articles]=articles></app-content>
+      <button (click)="size = size + 1">+</button>
+    </div>
+    <i class="material-icons">android</i>
+  </div>
+</div>
