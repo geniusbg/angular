@@ -1,0 +1,32 @@
+<form #form='ngForm' (ngSubmit)="getArtist(form.value)" class='jumbotron'>
+  <div class="form-group">
+    <label for="artist">Artist:</label>
+    <input type="text" class="form-control" id="artist" placeholder="" name='artist' ngModel required>
+  </div>
+  <div class="form-group">
+  </div>
+  <button type="submit" [disabled]="!form.valid">Search</button>
+</form>
+<div *ngIf='artist' class='jumbotron'>
+  <img src="{{artist.strArtistThumb}}">
+  Name: {{artist.strArtist}}
+
+  <div *ngIf='albums' class='row'>
+    <ul>
+      <li *ngFor="let album of albums" class="col-md-3">
+        <div class="card">
+          <img class="img-fluid" src="{{album.strAlbum3DFace}}" width="100%" alt="No Image to show">
+          <div class="card-body">
+            <p>
+              Name: {{album.strAlbum}}
+            </p>
+            <p>
+              Released : {{album.intYearReleased}}
+            </p>
+            <button [routerLink]="['/album', artist.strArtist, album.strAlbum]">View Songs</button>
+          </div>
+        </div>
+      <li>
+    </ul>
+  </div>
+</div>
