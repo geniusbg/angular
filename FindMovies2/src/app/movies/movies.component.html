@@ -1,0 +1,12 @@
+<div class="panel-body">
+  <h3>Popular Movies</h3>
+
+  <div *ngIf="popular" class="row">
+
+    <div *ngFor="let movie of popular.results ;let i=index" class="col-md-2">
+      <app-showmovie [movie]="movie"></app-showmovie>
+    </div>
+
+  </div>
+
+</div>
