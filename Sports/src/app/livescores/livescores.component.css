@@ -1,0 +1,55 @@
+#livescores {
+    background: #E4DAD1;
+    padding: 1.5%;
+}
+
+.livescore {
+    -webkit-box-shadow: 0px 0px 10px #4d4d4d;
+    -moz-box-shadow: 0px 0px 10px #4d4d4d;
+    box-shadow: 0px 0px 10px #4d4d4d;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;  
+    border-radius: 8px;
+    border:solid white 3px;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.outer {
+    float: left;
+    width: 100px;
+    /* background: url("https://images-eu.ssl-images-amazon.com/images/I/81RPUf0fg1L.png") no-repeat center center; */
+    /* background-size: cover; */
+    height: 100px;
+    -webkit-box-shadow: 0px 0px 10px #4d4d4d;
+    -moz-box-shadow: 0px 0px 10px #4d4d4d;
+    box-shadow: 0px 0px 10px #4d4d4d;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;  
+    border-radius: 8px;
+    border:solid white 3px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.time {
+    float: left;
+    text-align: left;
+}
+
+.league {
+    text-align: center;
+    float: right;
+}
+
+.round {
+    text-align: center;
+}
+
+.teams {
+    text-align: center;
+}
