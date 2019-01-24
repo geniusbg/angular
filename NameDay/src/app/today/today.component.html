@@ -1,0 +1,20 @@
+<h2>International Name Day on <span>{{curDate | date:'dd MMMM yyyy'}}</span></h2>
+<div *ngIf="today">
+  <div *ngFor="let item of today | keyvalue;let i = index">
+    <p>{{item.key}}: {{item.value}}</p>
+
+
+
+
+  </div>
+
+  <!-- <ul> -->
+  <!-- <li *ngFor="let item of today.data.name_us"> -->
+  <!-- <span>{{item}}</span> -->
+  <!-- </li> -->
+  <!-- </ul> -->
+</div>
+
+<!-- United States	Czech Republic	Slovakia	Poland
+France	Hungary	Croatia	Sweden
+Austria	Italy	Germany	Spain -->

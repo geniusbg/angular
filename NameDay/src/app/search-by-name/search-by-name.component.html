@@ -1,0 +1,45 @@
+<form #form='ngForm' (ngSubmit)="getByName(form.value)">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" #fname="ngModel" placeholder="First name" minlength="3" ngModel required
+        name="name">
+    </div>
+    <div class="col">
+      <select class="form-control" #fcountry="ngModel" placeholder="country" required ngModel name="country">
+        <option value selected>Choose here</option>
+        <option value="at">AT</option>
+        <option value="cz">CZ</option>
+        <option value="de">DE</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="hr">HR</option>
+        <option value="hu">HU</option>
+        <option value="it">IT</option>
+        <option value="pl">PL</option>
+        <option value="se">SE</option>
+        <option value="sk">SK</option>
+        <option value="us">US</option>
+      </select>
+    </div>
+  </div>
+  <div class="alert-danger" *ngIf="fname.touched && fname.errors">
+    <div *ngIf="fname.errors.required">Name required !</div>
+    <div class="alert-danger" *ngIf="fname.touched && fname.errors.minlength">Name must be minimum 3 characters</div>
+  </div>
+  <div class="alert-danger" *ngIf="fcountry.touched && fcountry.errors">Country required !</div>
+  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+</form>
+
+<ul>
+  <li *ngFor="let name of names">
+    <div class="">
+      Date: {{name.date | date: "dd MMMM"}}
+    </div>
+    <div>
+      Names: {{name.name}}
+    </div>
+  </li>
+</ul>
+<div class="alert-info" *ngIf="names == 0">
+  No results for your search
+</div>

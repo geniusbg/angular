@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
+* {
+    font-family: 'Abril Fatface', cursive;
+}
+h1 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
