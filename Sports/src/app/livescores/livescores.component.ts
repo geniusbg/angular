@@ -7,10 +7,20 @@ import { LivescoresService } from '../services/livescores.service';
   styleUrls: ['./livescores.component.css']
 })
 export class LivescoresComponent implements OnInit {
-  livescores:any;
+  livescores: any;
 
-  constructor(private getLivescores : LivescoresService) { }
+  constructor(private getLivescores: LivescoresService) {
+    setInterval(() => {
+      this.getLivescores.getLivescores().subscribe(data => {
+        this.livescores = data
+        console.log(data)
+        this.livescores = this.livescores.teams.Match
+        console.log(this.livescores)
+      })
+    }, 1000 * 10);
 
+    
+  }
   ngOnInit() {
     this.getLivescores.getLivescores().subscribe(data => {
       this.livescores = data
@@ -18,7 +28,5 @@ export class LivescoresComponent implements OnInit {
       this.livescores = this.livescores.teams.Match
       console.log(this.livescores)
     })
-  
   }
-
 }
