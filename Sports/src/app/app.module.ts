@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 //components
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
-import { SportsComponent } from './sports/sports.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { SportsComponent } from './components/sports/sports.component';
+import { ShowsportComponent } from './components/showsport/showsport.component';
 //services
 import { ListService } from './services/list.service';
-import { ShowsportComponent } from './showsport/showsport.component';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SportsComponent } from './sports/sports.component';
-import { ShowsportComponent } from './showsport/showsport.component';
+import { SportsComponent } from './components/sports/sports.component';
+import { ShowsportComponent } from './components/showsport/showsport.component';
 
 const routes: Routes = [
   { path: '', component: SportsComponent },
