@@ -1,0 +1,7 @@
+li {
+    list-style-type: none;
+}
+aside{
+    max-width: 20%;
+    display: inline-block;
+}
