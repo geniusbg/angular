@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LivescoresService } from '../services/livescores.service';
 
+
 @Component({
   selector: 'app-livescores',
   templateUrl: './livescores.component.html',
@@ -9,12 +10,22 @@ import { LivescoresService } from '../services/livescores.service';
 export class LivescoresComponent implements OnInit {
   livescores: any;
 
-  constructor(private getLivescores: LivescoresService) { }
+  constructor(private getLivescores: LivescoresService) {
+    setInterval(() => {
+      this.getLivescores.getLivescores().subscribe(data => {
+        this.livescores = data
+        console.log(data)
+        this.livescores = this.livescores.teams.Match
+        console.log(this.livescores)
+      })
+    }, 1000 * 120);
 
+    
+  }
   ngOnInit() {
     this.getLivescores.getLivescores().subscribe(data => {
       this.livescores = data
-      this.livescores = this.livescores.teams
+      this.livescores = this.livescores.teams.Match
       console.log(this.livescores)
       if (this.livescores.Match && this.livescores.Match.Date) {
         this.livescores = this.livescores.teams
