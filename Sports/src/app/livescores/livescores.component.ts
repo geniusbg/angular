@@ -27,16 +27,6 @@ export class LivescoresComponent implements OnInit {
       this.livescores = data
       this.livescores = this.livescores.teams.Match
       console.log(this.livescores)
-      if (this.livescores.Match && this.livescores.Match.Date) {
-        this.livescores = this.livescores.teams
-        console.log("From IF")
-        console.log(this.livescores)
-      }
-      else {
-        console.log(this.livescores)
-        console.log("From ELSE")
-        this.livescores = this.livescores.Match
-      }
     })
   }
 }
