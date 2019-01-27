@@ -22,19 +22,19 @@
       </div>
 
 
-      <div class="homeGoalDetails"  *ngIf="(livescore.HomeGoalDetails | json ) != '{}'">
+      <div class="homeGoalDetails" *ngIf="(livescore.HomeGoalDetails | json ) != '{}'">
         <div *ngFor="let item of (livescore.HomeGoalDetails | goals )">
           {{item}}
         </div>
       </div>
 
       <div class="awayGoalDetails" *ngIf="(livescore.AwayGoalDetails | json ) != '{}'">
-        <div  *ngFor="let item of (livescore.AwayGoalDetails | goals )">
+        <div *ngFor="let item of (livescore.AwayGoalDetails | goals )">
           {{item}}
         </div>
-      <div class="stadium"></div>
-      <!-- {{livescore.Location}} -->
-      Stadium: {{livescore.Stadium }}
+      </div>
+      <div class="stadium">
+        Stadium: {{livescore.Stadium }}
+      </div>
     </div>
   </div>
-</div>
