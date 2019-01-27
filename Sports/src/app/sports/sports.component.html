@@ -2,8 +2,8 @@
    <div id="list" *ngFor="let sport of sports; let i=index">
     <div *ngIf="i+2<=sports.length">
       <h3>{{sport.strSport}}</h3>
-      <a  [routerLink]="[ '/sports', sport.strSport ]"> <img src={{sport.strSportThumb}} alt="PICTURE HERE"></a>
-     
+      <a  (click) = setStr(sport.strSport)> <img src={{sport.strSportThumb}} alt="PICTURE HERE"></a>
     </div>
   </div>
+  <app-leagues [strSports]="outputStr"></app-leagues>
 </div>

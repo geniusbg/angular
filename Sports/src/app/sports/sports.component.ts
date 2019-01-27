@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs'
 import { ListService } from '../services/list.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
@@ -28,8 +28,11 @@ export class SportsComponent implements OnInit {
 
   constructor(private list: ListService) { }
   sports: any;
-  
-
+  outputStr: string = 'Golf';
+  setStr(str: string) {
+    this.outputStr = str;
+    console.log(this.outputStr)
+  }
   ngOnInit() {
 
     this.list.getSports().subscribe(data => {
