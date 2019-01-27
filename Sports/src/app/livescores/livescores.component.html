@@ -19,12 +19,11 @@
       <div class="teams" *ngIf="livescore.Time">
         <h3>{{livescore.HomeGoals}}:{{livescore.AwayGoals}}</h3>
       </div>
-      <span *ngIf="livescore.HomeGoalDetails != undefind">
-
+      <span *ngIf="(livescore.HomeGoalDetails | json) != '{}'">
         {{livescore.HomeGoalDetails}}
       </span>
-      {{livescore.Location}}
-      {{livescore.Stadium}}
+      <!-- {{livescore.Location}} -->
+      Stadium: {{livescore.Stadium}}
     </div>
   </div>
 </div>
