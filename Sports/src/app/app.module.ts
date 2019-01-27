@@ -15,6 +15,7 @@ import { ListService } from './services/list.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LivescoresComponent } from './livescores/livescores.component';
 import { LivescoresService } from './services/livescores.service';
+import { GoalsPipe } from './pipes/goals.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LivescoresService } from './services/livescores.service';
     HomeComponent,
     SportsComponent,
     NavbarComponent,
-    LivescoresComponent
+    LivescoresComponent,
+    GoalsPipe
   ],
   imports: [
     BrowserModule,
