@@ -20,7 +20,7 @@
         <h3>{{livescore.HomeGoals}}:{{livescore.AwayGoals}}</h3>
       </div>
       <span *ngIf="(livescore.HomeGoalDetails | json ) != '{}'">
-          <div *ngFor="let item of (livescore.HomeGoalDetails | goals )">
+          <div class="homeGoalDetails" *ngFor="let item of (livescore.HomeGoalDetails | goals )">
               {{item}}
               </div>
         
@@ -28,9 +28,9 @@
         
       </span>
       <span *ngIf="(livescore.AwayGoalDetails | json ) != '{}'">
-        <div *ngFor="let item of (livescore.AwayGoalDetails | goals )">
+        <div class="awayGoalDetails" *ngFor="let item of (livescore.AwayGoalDetails | goals )">
           {{item}}
-          </div>
+          </div >
         <!-- {{livescore.AwayGoalDetails | goals}} -->
       </span>
       <!-- {{livescore.Location}} -->

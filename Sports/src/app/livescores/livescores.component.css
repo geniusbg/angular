@@ -53,3 +53,11 @@
 .teams {
     text-align: center;
 }
+
+.awayGoalDetails {
+    float: right;
+}
+
+.homeGoalDetails {
+    float: left;
+}
