@@ -54,10 +54,13 @@
     text-align: center;
 }
 
-.awayGoalDetails {
-    float: right;
+.homeGoalDetails {
+    text-align: left;
+    /* float: right; */
 }
 
-.homeGoalDetails {
-    float: left;
+.awayGoalDetails {
+    /* float: right; */
+    text-align: right;
+
 }

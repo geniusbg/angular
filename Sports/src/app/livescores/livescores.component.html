@@ -3,7 +3,8 @@
     <div class="livescore" *ngFor="let livescore of livescores">
       <div class="time">
         <div class="time" *ngIf="livescore.Time && livescore.Time !== 'Not started'">Time: {{livescore.Time}}</div>
-        <div class="time" *ngIf="!livescore.Time || livescore.Time == 'Not started'">START: {{livescore.Date | date:"HH:mm"}}</div>
+        <div class="time" *ngIf="!livescore.Time || livescore.Time == 'Not started'">START: {{livescore.Date |
+          date:"HH:mm"}}</div>
       </div>
       <div class="league">
         {{livescore.League}}
@@ -19,20 +20,19 @@
       <div class="teams" *ngIf="livescore.Time">
         <h3>{{livescore.HomeGoals}}:{{livescore.AwayGoals}}</h3>
       </div>
-      <span *ngIf="(livescore.HomeGoalDetails | json ) != '{}'">
-          <div class="homeGoalDetails" *ngFor="let item of (livescore.HomeGoalDetails | goals )">
-              {{item}}
-              </div>
-        
-        <!-- {{livescore.HomeGoalDetails | goals}} -->
-        
-      </span>
-      <span *ngIf="(livescore.AwayGoalDetails | json ) != '{}'">
+
+
+      <div *ngIf="(livescore.HomeGoalDetails | json ) != '{}'">
+        <div class="homeGoalDetails" *ngFor="let item of (livescore.HomeGoalDetails | goals )">
+          {{item}}
+        </div>
+      </div>
+
+      <div *ngIf="(livescore.AwayGoalDetails | json ) != '{}'">
         <div class="awayGoalDetails" *ngFor="let item of (livescore.AwayGoalDetails | goals )">
           {{item}}
-          </div >
-        <!-- {{livescore.AwayGoalDetails | goals}} -->
-      </span>
+        </div>
+      </div>
       <!-- {{livescore.Location}} -->
       Stadium: {{livescore.Stadium }}
     </div>
