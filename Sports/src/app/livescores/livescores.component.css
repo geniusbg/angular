@@ -1,6 +1,17 @@
 #livescores {
     background: #E4DAD1;
     padding: 1.5%;
+    /* width: 30%; */
+    text-align: center;
+}
+
+#all2 {
+    display: inline-block;
+    width: 31vw;
+    height: 13vw;
+    /* padding: 5px; */
+    border: 1px solid blue;    
+    background-color: yellow; 
 }
 
 .livescore {
@@ -14,7 +25,9 @@
     border:solid white 3px;
     overflow: hidden;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 0.2vw;
+    display: inline-block;
+
 }
 
 
@@ -39,19 +52,23 @@
 .time {
     float: left;
     text-align: left;
+    font-size: 1.5vw;
 }
 
 .league {
-    text-align: center;
-    float: right;
+    text-align: right;
+    /* float: right; */
+    font-size: 1vw;
 }
 
-.round {
+/* .round {
     text-align: center;
-}
+    font-size: 2vw;
+} */
 
 .teams {
     text-align: center;
+    
 }
 
 .homeGoalDetails {
@@ -70,4 +87,9 @@
     clear: both;
     text-align: center;
     /* display: block; */
+}
+
+h3{
+    clear: both;
+    font-size: 2vw;
 }
