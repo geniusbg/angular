@@ -35,6 +35,7 @@ export class SportsComponent implements OnInit {
     this.list.getSports().subscribe(data => {
       this.sports = data
       this.sports = this.sports.sports
+      console.log(this.sports)
     });
   }
 }

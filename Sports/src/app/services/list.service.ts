@@ -14,4 +14,7 @@ export class ListService {
   getSports(){
     return this.http.get(`https://www.thesportsdb.com/api/v1/json/${apiKey}/all_sports.php`)
   }
+  getLeague(sport : string){
+    return this.http.get(`https://www.thesportsdb.com/api/v1/json/${apiKey}/search_all_leagues.php?s=${sport}`)
+  }
 }
