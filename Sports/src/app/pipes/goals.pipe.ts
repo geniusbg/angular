@@ -6,11 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class GoalsPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    value = value.split(';')
-    value.forEach(element => {
-      element = element + '\n'
-      console.log(element)
-    });
+    value = value.split(';').filter(el => {return el != ""})
+    console.log(value)
     return value;
   }
 
