@@ -23,6 +23,8 @@
         
         {{livescore.HomeGoalDetails | goals}}
         
+      </span>
+      <span *ngIf="(livescore.AwayGoalDetails | json ) != '{}'">
         {{livescore.AwayGoalDetails | goals}}
       </span>
       <!-- {{livescore.Location}} -->
