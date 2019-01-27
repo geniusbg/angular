@@ -26,7 +26,7 @@ import { LeaguesComponent } from './components/leagues/leagues.component';
     NavbarComponent,
     LivescoresComponent,
     GoalsPipe,
-    LeaguesComponent
+    LeaguesComponent,
   ],
   imports: [
     BrowserModule,

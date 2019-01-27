@@ -9,7 +9,7 @@ body {
     font-weight: lighter;
 }
 
-header {
+header.home {
     width: 100%;
     height: 100vh;
     background: url(https://www.ggba-switzerland.ch/wp-content/uploads/2018/04/Sports-HSC.jpg) no-repeat 100% 50%;
@@ -37,7 +37,7 @@ header {
     letter-spacing: 2px;
 }
 
-nav {
+nav.home {
     position: fixed;
     width: 100%;
     line-height: 60px;
@@ -115,4 +115,31 @@ nav ul li a {
           display: block;
     }
 
+}
+
+/* .insite {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+} */
+
+nav.insite {
+    width: 100%;
+    line-height: 60px;
+    position: fixed;
+    background: #000;
+    text-shadow:2px 2px black;
+}
+
+header.insite {
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
 }

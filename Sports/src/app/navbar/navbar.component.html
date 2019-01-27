@@ -15,9 +15,9 @@
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
    </head>
    <body>
-      <div class="wrapper">
-         <header>
-            <nav>
+      <div *ngIf="router.url === '/'">
+         <header class="home">
+            <nav class="home">
                <div class="menu-icon">
                   <i class="fa fa-bars fa-2x"></i>
                </div>
@@ -36,5 +36,30 @@
             </nav>
          </header>
       </div>
+
+
+      <div *ngIf="router.url !== '/'">
+         <header class="insite">
+            <nav class="insite">
+               <div class="menu-icon">
+                  <i class="fa fa-bars fa-2x"></i>
+               </div>
+               <div class="logo">
+                  Sport que te cagas
+               </div>
+               <div class="menu">
+                  <ul>
+                     <li><a routerLink="">Home</a></li>
+                     <li><a routerLink="/sports">Sports</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Contact</a></li>
+                     <li><a href="#">Contact</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+      </div>
+
+
    </body>
 </html>
