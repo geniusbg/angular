@@ -55,12 +55,19 @@
 }
 
 .homeGoalDetails {
-    text-align: left;
-    /* float: right; */
+    /* text-align: left; */
+    float: left;
+    /* width: 40%; */
 }
 
 .awayGoalDetails {
     /* float: right; */
     text-align: right;
 
+}
+
+.stadium {
+    clear: both;
+    text-align: center;
+    display: block;
 }
