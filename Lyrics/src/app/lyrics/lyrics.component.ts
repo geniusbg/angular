@@ -10,7 +10,6 @@ import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 export class LyricsComponent implements OnInit {
   lyrics: Object;
 
-
   constructor(private service: LyricsService, private route: ActivatedRoute,
     private router: Router) { }
   ngOnInit() {
