@@ -1,7 +1,23 @@
 #list {
-    display: inline-block;
-    width: 23%;
+    /* display: inline-block; */
+    /* width: 23%; */
     margin: 1%;
+}
+
+#leagues {
+    /* margin-left: 60px; */
+    /* text-align: right; */
+    /* width: 10%;  */
+    /* float: right; */
+    width: 70%;
+    display: table;
+}
+
+aside {
+    /* display: block; */
+    height: 100%;
+    width: 25%;
+    float: left;
 }
 
 h3 {
@@ -10,5 +26,5 @@ h3 {
 }
 
 img {
-    width: 100%;
+    width: 70%;
 }

@@ -24,6 +24,7 @@ export class LeaguesComponent implements OnInit, OnChanges {
     this.http.getLeague(this.strSports).subscribe(data => {
       this.leagues = data;
       this.leagues = this.leagues['countrys']
+      console.log(this.leagues)
     })
   }
 }
