@@ -28,13 +28,12 @@ export class SportsComponent implements OnInit {
 
   constructor(private list: ListService) { }
   sports: any;
-  outputStr: string = 'Golf';
+  outputStr: string;
+
   setStr(str: string) {
     this.outputStr = str;
-    console.log(this.outputStr)
   }
   ngOnInit() {
-
     this.list.getSports().subscribe(data => {
       this.sports = data
       this.sports = this.sports.sports

@@ -1,30 +1,29 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ListService } from '../../services/list.service'
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-leagues',
   templateUrl: './leagues.component.html',
   styleUrls: ['./leagues.component.css']
 })
-export class LeaguesComponent implements OnInit {
-  @Input() strSports : string
+export class LeaguesComponent implements OnInit, OnChanges {
+
+  @Input() strSports: string
+
   leagues: any;
-  constructor(private http: ListService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  constructor(private http: ListService) { }
 
-    // this.route.params.subscribe(data => {
-    //   this.http.getLeague(data['id']).subscribe(data => {
-    //     this.leagues = data;
-    //     this.leagues = this.leagues['countrys']
-    //   })
-    // })
-    console.log(this.strSports)
-    this.http.getLeague(this.strSports).subscribe(data => {
-          this.leagues = data;
-          this.leagues = this.leagues['countrys']
-        })
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['strSports']) {
+      this.ngOnInit()
+    }
   }
 
+  ngOnInit() {
+    this.http.getLeague(this.strSports).subscribe(data => {
+      this.leagues = data;
+      this.leagues = this.leagues['countrys']
+    })
+  }
 }
