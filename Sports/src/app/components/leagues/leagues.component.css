@@ -7,5 +7,7 @@ li {
 }
 span {
     display: block;
+    /* font-size: 2vw; */
     width : 10vw;
+    text-align: center;
 }

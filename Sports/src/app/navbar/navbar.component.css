@@ -135,6 +135,7 @@ nav.insite {
     line-height: 60px;
     position: fixed;
     background: #000;
+    opacity: 0.8;
     text-shadow:2px 2px black;
 }
 

@@ -1,7 +1,7 @@
 #list {
     /* display: inline-block; */
     /* width: 23%; */
-    margin: 1%;
+    margin-bottom: 3vw;
 }
 
 #leagues {
@@ -9,22 +9,33 @@
     /* text-align: right; */
     /* width: 10%;  */
     /* float: right; */
-    width: 70%;
+    width: 80%;
     display: table;
 }
 
 aside {
     /* display: block; */
+    margin: 1.5vw;
     height: 100%;
-    width: 25%;
+    width: 16%;
     float: left;
 }
 
 h3 {
+    /* color: transparent; */
+    color: #6e8559be;
+    /* text-shadow: 2px 2px 4px #000000; */
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
+    margin: 0;
     font-size: 2vw;
     text-align: center;
 }
 
 img {
-    width: 70%;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 2px black;
+}
+img:hover{
+    cursor: pointer;
 }
