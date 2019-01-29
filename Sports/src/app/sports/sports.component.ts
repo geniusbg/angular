@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs'
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ListService } from '../services/list.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
@@ -26,7 +26,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 export class SportsComponent implements OnInit {
 
-  constructor(private list: ListService) { }
+  constructor(private list: ListService, public router: Router) { }
   sports: any;
   outputStr: string;
 

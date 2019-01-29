@@ -1,13 +1,29 @@
-<div *ngIf="sports" id="container" [@listAnimation]="sports.length">
-  <aside>
-    <div id="list" *ngFor="let sport of sports; let i=index">
+<div *ngIf="router.url !== '/'">
+  <div *ngIf="sports" id="container" [@listAnimation]="sports.length">
+    <aside>
+      <div id="list" *ngFor="let sport of sports; let i=index">
+        <div *ngIf="i+2<=sports.length">
+          <h3>{{sport.strSport}}</h3>
+          <a (click)=setStr(sport.strSport)> <img src={{sport.strSportThumb}} alt="PICTURE HERE"></a>
+        </div>
+      </div>
+    </aside>
+    <div id='leagues'>
+      <app-leagues [strSports]="outputStr"></app-leagues>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="router.url == '/'">
+  <div *ngIf="sports" id="container-home" [@listAnimation]="sports.length">
+    <div id="list-home" class="box" *ngFor="let sport of sports; let i=index">
       <div *ngIf="i+2<=sports.length">
         <h3>{{sport.strSport}}</h3>
         <a (click)=setStr(sport.strSport)> <img src={{sport.strSportThumb}} alt="PICTURE HERE"></a>
       </div>
     </div>
-  </aside>
-  <div id='leagues'>
-    <app-leagues [strSports]="outputStr"></app-leagues>
+    <div id='leagues'>
+      <app-leagues [strSports]="outputStr"></app-leagues>
+    </div>
   </div>
 </div>
