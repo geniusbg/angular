@@ -130,6 +130,7 @@ nav.insite {
     position: fixed;
     background: #000;
     text-shadow: 2px 2px black;
+    z-index: 1;
 }
 
 header.insite {
