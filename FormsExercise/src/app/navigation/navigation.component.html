@@ -15,27 +15,27 @@
 
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item active">
+      <li *ngIf="authService.checkIfLogged()" class="nav-item active">
 
         <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
 
       </li>
 
-      <li class="nav-item">
+      <li *ngIf="!authService.checkIfLogged()" class="nav-item">
 
         <a class="nav-link" routerLink="/login">Login</a>
 
       </li>
 
-      <li class="nav-item">
+      <li *ngIf="!authService.checkIfLogged()" class="nav-item">
 
         <a class="nav-link" routerLink="/registration">Register</a>
 
       </li>
 
-      <li class="nav-item">
+      <li *ngIf="authService.checkIfLogged()" class="nav-item">
 
-        <a class="nav-link">Logout</a>
+        <a class="nav-link" (click)="logout()">Logout</a>
 
       </li>
 
