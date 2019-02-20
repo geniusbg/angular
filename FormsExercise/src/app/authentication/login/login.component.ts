@@ -10,29 +10,21 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   model: LoginModel
-  loginFailed : boolean;
-  errMessage : string;
-  constructor(private authService : AuthService, private router : Router) {
+  loginFailed: boolean;
+  errMessage: string;
+  constructor(private authService: AuthService, private router: Router) {
     this.model = new LoginModel('', '')
   }
 
   ngOnInit() {
   }
 
-  login(){
-    this.authService.login(this.model).subscribe(data=> {
-      this.successfulLogin(data)
+  login() {
+    this.authService.login(this.model).subscribe(data => {
     },
-    err => {
-      this.loginFailed = true;
-      this.errMessage = err.error.description;
-    })
-  }
-
-  successfulLogin(data) {
-    this.authService.authtoken = data['_kmd']['authtoken']
-    localStorage.setItem('authtoken', data['_kmd']['authtoken'])
-    localStorage.setItem('username', data['username'])
-    this.router.navigate(['/home'])
+      err => {
+        this.loginFailed = true;
+        this.errMessage = err.error.description;
+      })
   }
 }

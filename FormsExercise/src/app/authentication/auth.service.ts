@@ -12,7 +12,7 @@ const logoutUrl = `https://baas.kinvey.com/user/${appKey}/_logout`;
 @Injectable()
 
 export class AuthService {
-    private currentAuthtoken : string;
+    private currentAuthtoken: string;
 
     constructor(private http: HttpClient) { }
 
@@ -20,47 +20,42 @@ export class AuthService {
         return this.http.post(
             loginUrl,
             JSON.stringify(model),
-            {
-                headers: this.createAuthHeaders('Basic')
-            }
+
         )
     }
 
-    register(model:RegistrationModel) {
+    register(model: RegistrationModel) {
         return this.http.post(registerUrl, JSON.stringify(model), {
-            headers: this.createAuthHeaders('Basic')
         })
     }
 
     logout() {
-        return this.http.post(logoutUrl, {}, {
-            headers: this.createAuthHeaders('Kinvey')
-        })
+        return this.http.post(logoutUrl, {})
     }
 
-    get authtoken(){
+    get authtoken() {
         return this.currentAuthtoken
     }
 
-    set authtoken(value:string) {
+    set authtoken(value: string) {
         this.currentAuthtoken = value
     }
 
-    checkIfLogged(){
+    checkIfLogged() {
         return this.currentAuthtoken === localStorage.getItem('authtoken')
     }
 
-    private createAuthHeaders(type: string) {
-        if (type === 'Basic') {
-            return new HttpHeaders({
-                'Authorization': `Basic ${btoa(`${appKey}:${appSecret}`)}`,
-                'Content-type': 'application/json'
-            })
-        } else {
-            return new HttpHeaders({
-                'Authorization': `Kinvey ${localStorage.getItem('authtoken')}`,
-                'Content-type': 'application/json'
-            })
-        }
-    }
+    // private createAuthHeaders(type: string) {
+    //     if (type === 'Basic') {
+    //         return new HttpHeaders({
+    //             'Authorization': `Basic ${btoa(`${appKey}:${appSecret}`)}`,
+    //             'Content-type': 'application/json'
+    //         })
+    //     } else {
+    //         return new HttpHeaders({
+    //             'Authorization': `Kinvey ${localStorage.getItem('authtoken')}`,
+    //             'Content-type': 'application/json'
+    //         })
+    //     }
+    // }
 }

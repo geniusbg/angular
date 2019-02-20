@@ -10,6 +10,9 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './authentication/auth.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http'
+import { AuthGuard } from './authentication/guards/auth.guard';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { AuthService } from './authentication/auth.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass : TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
