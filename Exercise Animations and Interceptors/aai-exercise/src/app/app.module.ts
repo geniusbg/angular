@@ -1,6 +1,4 @@
 import { FurnitureService } from "./furniture.service";
-import { ErrorInterceptor } from "./interceptors/app.error.interceptor";
-import { AuthInterceptor } from "./interceptors/app.auth.intercetor";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
@@ -20,6 +18,8 @@ import { AllFurnitureComponent } from "./all-furniture/all-furniture.component";
 import { CreateFurnitureComponent } from "./create-furniture/create-furniture.component";
 import { FurnitureDetailsComponent } from "./furniture-details/furniture-details.component";
 import { MyFurnitureComponent } from "./my-furniture/my-furniture.component";
+import { JwtInterceptor } from "./interceptors/jwt.interceptor";
+import { ErrorInterceptor } from "./interceptors/app.error.interceptor.orig";
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { MyFurnitureComponent } from "./my-furniture/my-furniture.component";
     AuthService,
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
+      useClass: JwtInterceptor,
       multi: true
     },
     {
