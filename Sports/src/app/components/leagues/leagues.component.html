@@ -1,0 +1,11 @@
+<div *ngIf='leagues'>
+  <ul>
+    <li *ngFor="let item of leagues">
+      <img src={{item.strBadge}}>
+
+      <span>
+        {{item.strLeague}}
+      </span>
+    </li>
+  </ul>
+</div>

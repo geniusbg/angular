@@ -1,0 +1,19 @@
+<form *ngIf='!lyric' #form='ngForm' (ngSubmit)="getLyrics(form.value)">
+  <div class="form-group">
+    <label for="artist">Artist:</label>
+    <input type="text" class="form-control" id="artist" placeholder="" name='artist' ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" id="title" placeholder="" name="title" ngModel required>
+  </div>
+  <button type="submit" [disabled]="!form.valid">Search</button>
+</form>
+
+<div class='jumbotron' *ngIf='lyric'>
+  <p >
+    {{lyric.lyrics}}
+  </p>
+  <button *ngIf="lyric" [routerLink]="['/lyrics']">Back</button>
+
+</div>

@@ -1,0 +1,95 @@
+#livescores {
+    /* background: #E4DAD1; */
+    padding: 1.5%;
+    /* width: 30%; */
+    text-align: center;
+}
+
+#all2 {
+    display: inline-block;
+    width: 31vw;
+    height: 13vw;
+    /* padding: 5px; */
+    /* border: 1px solid blue;     */
+    /* background-color: yellow;  */
+}
+
+.livescore {
+    -webkit-box-shadow: 0px 0px 10px #4d4d4d;
+    -moz-box-shadow: 0px 0px 10px #4d4d4d;
+    box-shadow: 0px 0px 10px #4d4d4d;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;  
+    border-radius: 8px;
+    border:solid white 3px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0.2vw;
+    display: inline-block;
+
+}
+
+
+.outer {
+    float: left;
+    width: 100px;
+    /* background: url("https://images-eu.ssl-images-amazon.com/images/I/81RPUf0fg1L.png") no-repeat center center; */
+    /* background-size: cover; */
+    height: 100px;
+    -webkit-box-shadow: 0px 0px 10px #4d4d4d;
+    -moz-box-shadow: 0px 0px 10px #4d4d4d;
+    box-shadow: 0px 0px 10px #4d4d4d;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;  
+    border-radius: 8px;
+    border:solid white 3px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.time {
+    float: left;
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+.league {
+    text-align: right;
+    /* float: right; */
+    font-size: 1vw;
+}
+
+/* .round {
+    text-align: center;
+    font-size: 2vw;
+} */
+
+.teams {
+    text-align: center;
+    
+}
+
+.homeGoalDetails {
+    /* text-align: left; */
+    float: left;
+    /* width: 40%; */
+}
+
+.awayGoalDetails {
+    /* float: right; */
+    text-align: right;
+
+}
+
+.stadium {
+    clear: both;
+    text-align: center;
+    /* display: block; */
+}
+
+h3{
+    clear: both;
+    font-size: 2vw;
+}

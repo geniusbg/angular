@@ -1,0 +1,210 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+header.home {
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.ggba-switzerland.ch/wp-content/uploads/2018/04/Sports-HSC.jpg) no-repeat 100% 50%;
+    /* background: url(http://sportskills.bg/wp-content/uploads/2017/01/Sport-29e170c.jpg) no-repeat 50% 50%; */
+    /* background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%; */
+    background-size: cover;
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5vw;
+    letter-spacing: 2px;
+}
+
+nav.home {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 1;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 3%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 786px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 34em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* .insite {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+} */
+
+nav.insite {
+    width: 100%;
+    line-height: 60px;
+    position: fixed;
+    background: #000;
+    text-shadow: 2px 2px black;
+    z-index: 1;
+}
+
+header.insite {
+    width: 100%;
+    height: 15vh;
+    background-size: cover;
+}
+
+.block-menu li a {
+    /* color: #fff; */
+    display: block;
+    /* text-decoration: none; */
+    /* font-family: 'Passion One', Arial, sans-serif; */
+    /* font-smoothing: antialiased; */
+    /* text-transform: uppercase; */
+    /* overflow: visible; */
+    /* line-height: 20px; */
+    /* font-size: 24px; */
+    /* padding: 15px 10px; */
+}
+
+/* animation domination */
+
+.three-d {
+    perspective: 200px;
+    transition: all .07s linear;
+    position: relative;
+    cursor: pointer;
+}
+
+/* complete the animation! */
+
+.three-d:hover .three-d-box, .three-d:focus .three-d-box {
+    transform: translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+    transition: all .3s ease-out;
+    transform: translatez(-25px);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+	put the "front" and "back" elements into place with CSS transforms, 
+	specifically translation and translatez
+*/
+
+.front {
+    transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+    transform: rotatex(-90deg) translatez(25px);
+    color: #6e8559be;
+    font-weight: bold;
+}
+
+.front, .back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    /* padding: 15px 10px; */
+    pointer-events: none;
+    box-sizing: border-box;
+    text-shadow: 2px 2px #000
+}

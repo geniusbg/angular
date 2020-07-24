@@ -1,0 +1,15 @@
+https://www.themoviedb.org/
+username: angularbg
+Password: angular123
+API Key (v3 auth)
+
+5c0f1ab80ce144114982f5aac8c5da57
+API Read Access Token (v4 auth)
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YzBmMWFiODBjZTE0NDExNDk4MmY1YWFjOGM1ZGE1NyIsInN1YiI6IjVjMmNmNzVjOTI1MTQxNjdkNTZkMzA5NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kCJW7wzMjTDRi1YY4HfVhmG9YV6reSgbNUyZd54iR0c
+Example API Request
+
+https://api.themoviedb.org/3/movie/550?api_key=5c0f1ab80ce144114982f5aac8c5da57
+
+
+chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security

@@ -1,0 +1,11 @@
+<div id="main" class="{{currentColor}}" style="text-align: center">
+  
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <div *ngIf="currentColor"> 
+    <p>Your Color is: {{currentColor}}</p>
+  </div>
+  <app-articles></app-articles>
+  <app-footer (colorChanged)="colorChanged($event)"></app-footer>
+</div>
